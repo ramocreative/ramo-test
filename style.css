@@ -58,7 +58,6 @@ p {
     width: 60px;
     border-radius: 999px;
     z-index: 999;
-    transition: 2s;
 }
 
 #progress-value {
