@@ -19,6 +19,12 @@
 </head>
 <body>
 
+    <!----------------SCROLL-UP---------------->
+
+    <div id="progress">
+        <span id="progress-value"><i class="ri-arrow-up-line"></i></span>
+    </div>
+
     <!----------------HEADER---------------->
 
     <header>
@@ -102,8 +108,56 @@
                 </h2>
                 <img src="Assets/Projects/DSW.png">
             </div>
+
+
+
+            
+
+            <div class="project-card">
+                <div class="overly"></div>
+
+                <h2>iMAD Tech
+                    <br>
+                    <p>Brand Identity | Iraq</p>
+                </h2>
+                <img src="Assets/Projects/iMAD.png">
+            </div>
+
+            <div class="project-card">
+                <div class="overly"></div>
+
+                <h2>Dupamicaffeine
+                    <br>
+                    <p>Brand Identity | Saudi Arabia</p>
+                </h2>
+                <img src="Assets/Projects/Dupamicaffeine.png">
+            </div>
+
+            <a href="tijltil-gamers.html">
+                <div class="project-card">
+                    <div class="overly"></div>
+    
+                    <h2>TiJLTiL Gamers
+                        <br>
+                        <p>Brand Identity | Saudi Arabia</p>
+                    </h2>
+                    <img src="Assets/Projects/TiJLTiL-Gamers.png">
+                </div>
+            </a>
+
+            <div class="project-card">
+                <div class="overly"></div>
+
+                <h2>DSW - Graphic Designer
+                    <br>
+                    <p>Brand Identity | Saudi Arabia</p>
+                </h2>
+                <img src="Assets/Projects/DSW.png">
+            </div>
         </div>
     </section>
+
+    <!----------------JAVASCRIPT---------------->
 
     <!----------------JAVASCRIPT---------------->
 
@@ -118,6 +172,29 @@
         function hideMenu(){
             navbar.style.right = "-50%";
         }
+
+
+        let calcScrollValue = () => {
+            let scrollProgress = document.getElementById("progress");
+            let progressValue = document.getElementById("progress-value");
+            let pos = document.documentElement.scrollTop;
+            let calcHeight =
+                document.documentElement.scrollHeight -
+                document.documentElement.clientHeight;
+            let scrollValue = Math.round((pos * 100) / calcHeight);
+            if (pos > 100) {
+                scrollProgress.style.display = "flex";
+            } else {
+                scrollProgress.style.display = "none";
+            }
+            scrollProgress.addEventListener("click", () => {
+                document.documentElement.scrollTop = 0;
+            });
+            scrollProgress.style.background = `conic-gradient(#31e981 ${scrollValue}%, #fcfcfc ${scrollValue}%)`;
+            };
+
+            window.onscroll = calcScrollValue;
+            window.onload = calcScrollValue;
 
     </script>
 </body>
