@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramo Creative</title>
+
+    <!----------------CSS---------------->
+
+    <link rel="stylesheet" href="style.css">
+
+    <!----------------REMIXICON---------------->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+    <!----------------FAVICON---------------->
+
+    <link rel="shortcut icon" type="image/jpg" href="Assets/Logo & Favicon/Favicon.svg"/>
+</head>
+<body>
+
+    <!----------------HEADER---------------->
+
+    <header>
+        <a href="" class="logo">Ramo Creative</a>
+        <i class="ri-menu-4-line" id="menu-icon" onclick="showMenu()"></i>
+        <nav class="navbar" id="navbar">
+            <a href="#">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <i class="ri-close-line" id="close-icon" onclick="hideMenu()"></i>
+        </nav>
+    </header>
+
+    <!----------------HOMEPAGE---------------->
+
+    <div class="homepage">
+        <div class="homepage-cont">
+            <div class="hero-text">
+                <p>Welcome to my world</p>
+                <h1>Let's make your ideas <br> become reality</h1>
+                <p>My name is Raman S. Jalal, known as “Ramo Creative”. A passionate graphic designer specializing in crafting eye-catching logos and impactful brand experiences, based in Iraq.</p>
+            </div>
+
+            <div class="sm-cont">
+                <span><i class="ri-twitter-x-line"></i><i class="ri-twitter-x-line hover-fx"></i><div class="sm-bg"></div></span>
+                <span><i class="ri-instagram-line"></i><i class="ri-instagram-line hover-fx"></i><div class="sm-bg"></div></span>
+                <span><i class="ri-behance-fill"></i><i class="ri-behance-fill hover-fx"></i><div class="sm-bg"></div></span>
+            </div>
+    
+            <div class="button-cont">
+                <a href="" class="cta-btn"><span>Let's talk</span><span class="btn-bg"></span><i class="ri-mail-send-line"></i></a>
+                <a href="" class="sec-btn"><span>Projects</span><span class="btn-bg"></span><i class="ri-arrow-right-line"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!----------------PROJECTS---------------->
+
+    <section class="projects" id="projects">
+        <div class="project-cards-cont">
+
+            <div class="project-card">
+                <div class="overly"></div>
+
+                <h2>iMAD Tech
+                    <br>
+                    <p>Brand Identity | Iraq</p>
+                </h2>
+                <img src="Assets/Projects/iMAD.png">
+            </div>
+
+            <div class="project-card">
+                <div class="overly"></div>
+
+                <h2>Dupamicaffeine
+                    <br>
+                    <p>Brand Identity | Saudi Arabia</p>
+                </h2>
+                <img src="Assets/Projects/Dupamicaffeine.png">
+            </div>
+
+            <a href="tijltil-gamers.html">
+                <div class="project-card">
+                    <div class="overly"></div>
+    
+                    <h2>TiJLTiL Gamers
+                        <br>
+                        <p>Brand Identity | Saudi Arabia</p>
+                    </h2>
+                    <img src="Assets/Projects/TiJLTiL-Gamers.png">
+                </div>
+            </a>
+
+            <div class="project-card">
+                <div class="overly"></div>
+
+                <h2>DSW - Graphic Designer
+                    <br>
+                    <p>Brand Identity | Saudi Arabia</p>
+                </h2>
+                <img src="Assets/Projects/DSW.png">
+            </div>
+        </div>
+    </section>
+
+    <!----------------JAVASCRIPT---------------->
+
+    <script>
+        
+        var navbar = document.getElementById("navbar");
+        
+        function showMenu(){
+            navbar.style.right = "0";
+        }
+
+        function hideMenu(){
+            navbar.style.right = "-50%";
+        }
+
+    </script>
+</body>
+</html>
