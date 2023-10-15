@@ -58,6 +58,11 @@ p {
     width: 60px;
     border-radius: 999px;
     z-index: 999;
+    transition: 0.4s;
+}
+
+#progress:hover {
+    transform: scale(1.2);
 }
 
 #progress-value {
@@ -73,6 +78,11 @@ p {
 
 #progress-value i {
     display: flex;
+    transition: 0.4s;
+}
+
+#progress:hover #progress-value i {
+    transform: translateY(-6px);
 }
 
 @media (max-width: 1180px) {
