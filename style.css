@@ -91,6 +91,10 @@ p {
         right: 72px;
     }
 
+    #progress:hover {
+    transform: scale(1);
+}
+
     #progress:hover #progress-value i {
     transform: translateY(0px);
 }
