@@ -90,6 +90,10 @@ p {
         bottom: 72px;
         right: 72px;
     }
+
+    #progress:hover #progress-value i {
+    transform: translateY(0px);
+}
 }
 
 @media (max-width: 992px) {
