@@ -6,6 +6,7 @@
     font-family: 'Poppins',sans-serif;
     scroll-behavior: smooth;
     box-sizing: border-box;
+    user-select: none;
 }
 
 body {
@@ -91,13 +92,9 @@ p {
         right: 72px;
     }
 
-    #progress:hover {
-    transform: scale(1);
-}
-
     #progress:hover #progress-value i {
-    transform: translateY(0px);
-}
+        transform: translateY(0px);
+    }
 }
 
 @media (max-width: 992px) {
@@ -116,11 +113,12 @@ p {
 
 header {
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 0px;
+    left: 0px;
     width: 100%;
     height: 10vh;
     padding: 0 144px;
+    border-radius: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -134,7 +132,7 @@ header::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
     z-index: -1;
 }
@@ -152,6 +150,10 @@ header::before {
 #menu-icon:hover {
     transform: scale(1.2);
     color: #31e981;
+}
+
+#menu-icon:active {
+    transform: scale(1);
 }
 
 #menu-icon, #close-icon {
@@ -260,15 +262,16 @@ header::before {
 
     .navbar {
         flex-direction: column;
-        align-items: center;
+        align-items: left;
         position: absolute;
+        top: 0;
+        right: -50%;
         background: #0d132199;
         backdrop-filter: blur(5px);
         width: 50%;
         height: 100vh;
-        top: 0;
-        right: -50%;
-        padding-top: 200px;
+        padding-top: 20%;
+        padding-left: 8%;
         z-index: 999;
     }
 
@@ -289,6 +292,10 @@ header::before {
     .navbar #close-icon:hover {
         transform: scale(1.2);
         color: #31e981;
+    }
+
+    .navbar #close-icon:active {
+        transform: scale(1);
     }
 }
 
@@ -311,6 +318,10 @@ header::before {
 @media (max-width: 480px) {
     header {
         padding: 0 24px;
+    }
+
+    .navbar {
+        padding-top: 30%;
     }
 
     .navbar a {
@@ -380,6 +391,10 @@ header::before {
 
 .sm-cont span:hover {
     transform: scale(1.2);
+}
+
+.sm-cont span:active {
+    transform: scale(1);
 }
 
 .sm-cont span:hover i {
@@ -718,51 +733,80 @@ header::before {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    aspect-ratio: 16/9;
+}
+
+.imad {
+    width: 100%;
+    background: url(Assets/Projects/iMAD.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.dupamicaffeine {
+    width: 100%;
+    background: url(Assets/Projects/Dupamicaffeine.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.tijltil-gamers {
+    width: 100%;
+    background: url(Assets/Projects/TiJLTiL-Gamers.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.dsw {
+    width: 100%;
+    background: url(Assets/Projects/DSW.png) no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .project-card h2 {
-    background: #00000050;
-    backdrop-filter: blur(5px);
-    font-size: 42px;
     position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 60px;
+    bottom: 100px;
+    left: 100px;
+    font-size: 28px;
     z-index: 3;
 }
 
-.project-card p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #cacaca;
-    margin-top: 4px;
+.project-card span {
+    font-size: 28px;
+    font-weight: 200;
+    color: #fcfcfc;
+    z-index: 3;
 }
-
 
 .project-card .overly {
     opacity: 0;
     width: 100%;
     height: 100%;
     position: absolute;
-    background: #00000075;
+    background: linear-gradient(to top right, #00000030, #00000000), #00000050;
     left: 0;
     top: 0;
     z-index: 2;
-    transition: 0.7s;
+    transition: 0.7s ease-in-out;
 }
 
 .project-card:hover .overly {
     opacity: 1;
 }
 
-.project-card img {
-    width: 100%;
-    transition: 0.7s;
+.project-card .imad,
+.project-card .dupamicaffeine,
+.project-card .tijltil-gamers,
+.project-card .dsw {
+    transition: 0.5s;
 }
 
-.project-card:hover img {
-    transform: scale(1.05);
+.project-card:hover .imad,
+.project-card:hover .dupamicaffeine,
+.project-card:hover .tijltil-gamers,
+.project-card:hover .dsw {
+    transform: scale(1.1);
 }
 
 @media (max-width: 1180px) {
