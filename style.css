@@ -9,13 +9,24 @@
     user-select: none;
 }
 
-body {
-    background: #0d1321;
+body { 
+    background: linear-gradient(to top right, #0d1321, #0d132172), url(Assets/BG.png);
     width: 100%;
     height: 100vh;
-    background-position: center;
+    background-position: left;
     background-size: cover;
     background-attachment: fixed;
+    animation: bg 35s infinite alternate;
+}
+
+@keyframes bg {
+    from{
+        background-position: left;
+    }
+
+    to {
+        background-position: right;
+    }
 }
 
 ul li {
@@ -41,6 +52,12 @@ h1 {
 p {
     color: #fcfcfc70;
     font-size: 16px;
+}
+
+@media (max-width: 992px) {
+    body {
+        animation: bg 45s infinite alternate;
+    }
 }
 
 /*----------------SCROLL-UP----------------*/
@@ -133,7 +150,7 @@ header::before {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     z-index: -1;
 }
 
