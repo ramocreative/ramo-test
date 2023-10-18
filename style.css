@@ -654,7 +654,7 @@ header::before {
     .cta-btn,
     .sec-btn {
         width: 100%;
-        min-height: 150px;
+        min-height: 40px;
     }
 
     .cta-btn i,
