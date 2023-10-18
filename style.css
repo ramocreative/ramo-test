@@ -70,7 +70,7 @@ p {
     color: #0d1321;
     background: #fcfcfc;
     position: fixed;
-    bottom: 200px;
+    bottom: 144px;
     right: 144px;
     height: 60px;
     width: 60px;
@@ -106,6 +106,7 @@ p {
 @media (max-width: 1920px) {
     #progress {
         bottom: 72px;
+        right: 72px;
     }
 }
 
@@ -126,6 +127,7 @@ p {
 
 @media (max-width: 992px) {
     #progress {
+        bottom: 60px;
         right: 60px;
     }
 
@@ -136,6 +138,7 @@ p {
 
 @media (max-width: 480px) {
     #progress {
+        bottom: 24px;
         right: 24px;
     }
 }
@@ -447,9 +450,8 @@ header::before {
     align-items: center;
     border-radius: 8px;
     overflow: hidden; 
-    padding: 16px 32px;
     min-width: 200px;
-    height: fit-content;
+    min-height: 60px;
     color: #0d1321;
     font-size: 20px;
     font-weight: 600;
@@ -496,20 +498,30 @@ header::before {
 }
 
 .btn-text {
-    margin-right: -10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     transition: 0.7s;
 }
 
 .cta-btn:hover .btn-text {
-    margin-right: 12px;
+    left: 20%;
+    transform: translate(0, -50%);
 }
 
 .cta-btn i {
-    opacity: 0;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
     transition: 0.7s;
+    opacity: 0;
 }
 
 .cta-btn:hover i {
+    right: 20%;
+    transform: translate(0, -50%);
     opacity: 1;
 }
 
@@ -522,7 +534,7 @@ header::before {
     overflow: hidden; 
     padding: 16px 32px;
     min-width: 200px;
-    height: fit-content;
+    min-height: 60px;
     color: #fcfcfc;
     font-size: 20px;
     font-weight: 600;
@@ -559,20 +571,23 @@ header::before {
     transform: scale(1.2);
 }
 
-.btn-text {
-    margin-right: -10%;
-}
-
 .sec-btn:hover .btn-text {
-    margin-right: 12px;
+    left: 20%;
+    transform: translate(0, -50%);
 }
 
 .sec-btn i {
-    opacity: 0;
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
     transition: 0.7s;
+    opacity: 0;
 }
 
 .sec-btn:hover i {
+    right: 20%;
+    transform: translate(0, -50%);
     opacity: 1;
 }
 
@@ -627,9 +642,23 @@ header::before {
         margin-top: 10%;
     }
 
+    .cta-btn:hover .btn-text,
+    .sec-btn:hover .btn-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.7s;
+    }
+
     .cta-btn,
     .sec-btn {
         width: 100%;
+    }
+
+    .cta-btn i,
+    .sec-btn i {
+        display: none;
     }
 }
 
