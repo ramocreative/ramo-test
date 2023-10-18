@@ -607,6 +607,16 @@ header::before {
     opacity: 1;
 }
 
+@media (max-width: 1920px) {
+    .homepage-cont {
+        bottom: 128px;
+    }
+
+    .button-cont {
+        margin-top: 10%;
+    }
+}
+
 @media (max-width: 1180px) {
     .homepage-cont {
         left: 72px;
@@ -848,7 +858,7 @@ header::before {
 .project-card .dupamicaffeine,
 .project-card .tijltil-gamers,
 .project-card .dsw {
-    transition: 0.5s;
+    transition: 0.7s;
 }
 
 .project-card:hover .imad,
@@ -856,6 +866,13 @@ header::before {
 .project-card:hover .tijltil-gamers,
 .project-card:hover .dsw {
     transform: scale(1.1);
+}
+
+@media (max-width: 1920px) {
+    .project-card h2 {
+        bottom: 48px;
+        left: 60px;
+    }
 }
 
 @media (max-width: 1180px) {
