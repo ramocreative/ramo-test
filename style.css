@@ -103,6 +103,12 @@ p {
     transform: translateY(-6px);
 }
 
+@media (max-width: 1920px) {
+    #progress {
+        bottom: 72px;
+    }
+}
+
 @media (max-width: 1180px) {
     #progress {
         bottom: 72px;
@@ -219,56 +225,6 @@ header::before {
 
 .navbar a:hover::after {
     width: 100%;
-}
-
-.cta-btn-header {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    overflow: hidden; 
-    padding: 16px 32px;
-    min-width: 200px;
-    color: #0d1321;
-    font-size: 20px;
-    font-weight: 600;
-    text-align: center;
-    background: #31e981;
-    transition: 0.7s;
-    z-index: 1;
-}
-
-.cta-btn-header:hover {
-    padding: 16px 40px;
-}
-
-.cta-btn-header::before {
-    content: '';
-    background: #fcfcfc;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 100%;
-    z-index: -1;
-    transition: 0.7s;
-}
-
-.cta-btn-header:hover::before {
-    width: 100%;
-}
-
-.cta-btn-header i {
-    transform: scaleX(0);
-    opacity: 0;
-    transition: 0.7s;
-}
-
-.cta-btn-header:hover i {
-    margin-left: 12px;
-    transform: scaleX(1);
-    opacity: 1;
 }
 
 @media (max-width: 1180px) {
@@ -539,14 +495,21 @@ header::before {
     transform: scale(1.2);
 }
 
+.btn-text {
+    margin-right: -10%;
+    transition: 0.7s;
+}
+
+.cta-btn:hover .btn-text {
+    margin-right: 12px;
+}
+
 .cta-btn i {
-    margin-left: -20px;
     opacity: 0;
     transition: 0.7s;
 }
 
 .cta-btn:hover i {
-    margin-left: 12px;
     opacity: 1;
 }
 
@@ -566,7 +529,7 @@ header::before {
     text-align: center;
     background: transparent;
     box-shadow: 0px 0px 0px 1px #fcfcfc inset;
-    transition: 0.7s;
+    transition: 0.4s;
     z-index: 1;
 }
 
@@ -596,24 +559,48 @@ header::before {
     transform: scale(1.2);
 }
 
+.btn-text {
+    margin-right: -10%;
+}
+
+.sec-btn:hover .btn-text {
+    margin-right: 12px;
+}
+
 .sec-btn i {
-    margin-left: -20px;
     opacity: 0;
     transition: 0.7s;
 }
 
 .sec-btn:hover i {
-    margin-left: 12px;
     opacity: 1;
 }
 
 @media (max-width: 1920px) {
     .homepage-cont {
-        bottom: 128px;
+        bottom: 100px;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+    }
+
+    .hero-text p:not(:last-child),
+    .hero-text p:last-child {
+        font-size: 14px;
+    }
+
+    .sm-cont span {
+        font-size: 18px;
     }
 
     .button-cont {
-        margin-top: 10%;
+        margin-top: 14%;
+    }
+
+    .cta-btn,
+    .sec-btn {
+        font-size: 14px;
     }
 }
 
