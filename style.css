@@ -10,7 +10,7 @@
 }
 
 body { 
-    background: linear-gradient(to top right, #0d1321, #0d132172), url(Assets/BG.png);
+    background: linear-gradient(to top right, #0d1321, #0d1321be), url(Assets/BG.png);
     width: 100%;
     height: 100vh;
     background-position: left;
@@ -109,6 +109,10 @@ p {
         right: 72px;
     }
 
+    #progress:hover {
+        transform: scale(1);
+    }
+
     #progress:hover #progress-value i {
         transform: translateY(0px);
     }
@@ -117,6 +121,10 @@ p {
 @media (max-width: 992px) {
     #progress {
         right: 60px;
+    }
+
+    #progress:hover #progress-value i {
+        transform: translateY(0px);
     }
 }
 
@@ -676,6 +684,30 @@ header::before {
     .cta-btn,
     .sec-btn {
         min-width: 100%;
+    }
+
+    #progress:active {
+        transform: scale(1.2);
+    }
+
+    .sm-cont span:active .sm-bg {
+        transform: scale(1);
+    }
+    .sm-cont span:active .hover-fx {
+        transform: translateY(0);
+    }
+
+    .sec-btn:active {
+        color: #0d1321;
+    }
+
+    .sec-btn:active::before {
+        transform: scale(1.2);
+    }
+
+    .sec-btn:active i {
+        margin-left: 12px;
+        opacity: 1;
     }
 }
 
