@@ -15,7 +15,7 @@
 
     <!----------------FAVICON---------------->
 
-    <link rel="shortcut icon" type="image/jpg" href="Assets/Logo & Favicon/Favicon.svg"/>
+    <link rel="shortcut icon" type="image/jpg" href="Assets/Header/Favicon.svg"/>
 </head>
 <body>
 
@@ -29,14 +29,14 @@
 
     <header>
         <a href="" class="logo">Ramo Creative</a>
-        <i class="ri-menu-4-line" id="menu-icon" onclick="showMenu()"></i>
+        <!-- <i class="ri-menu-4-line" id="menu-icon" onclick="showMenu()"></i> -->
         <nav class="navbar" id="navbar">
             <a href="#home">Home</a>
             <a href="#projects">Projects</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
             <a href="#contact">Request</a>
-            <i class="ri-close-line" id="close-icon" onclick="hideMenu()"></i>
+            <!-- <i class="ri-close-line" id="close-icon" onclick="hideMenu()"></i> -->
         </nav>
     </header>
 
@@ -70,29 +70,37 @@
     <section class="projects" id="projects">
         <div class="project-cards-cont">
 
-            <div class="project-card">
-                <div class="overly"></div>
-                <div class="imad"></div>
-                <h2>iMAD Tech <br> By Hussein AlJazairi <br> <span>Brand Identity | Iraq</span></h2>
-            </div>
+            <a href="Projects Case Study/imad.html">
+                <div class="project-card">
+                    <div class="overly"></div>
+                    <div class="imad"></div>
+                    <h2>iMAD Tech <br> By Hussein AlJazairi <br> <span>Brand Identity | Iraq</span></h2>
+                </div>
+            </a>
 
-            <div class="project-card">
-                <div class="overly"></div>
-                <div class="dupamicaffeine"></div>
-                <h2>Dupamicaffeine <br> Coffee, Music & Book <br> <span>Brand Identity | Saudi Arabia</span></h2>
-            </div>
+            <a href="Projects Case Study/dupamicaffeine.html">
+                <div class="project-card">
+                    <div class="overly"></div>
+                    <div class="dupamicaffeine"></div>
+                    <h2>Dupamicaffeine <br> Coffee, Music & Book <br> <span>Brand Identity | Saudi Arabia</span></h2>
+                </div>
+            </a>
 
-            <div class="project-card">
-                <div class="overly"></div>
-                <div class="tijltil-gamers"></div>
-                <h2>TiJLTiL Gamers <br> Easy Trophy Earning for PlayStation Games <br> <span>Brand Identity | Saudi Arabia</span></h2> 
-            </div>
+            <a href="Projects Case Study/tijltil-gamers.html">
+                <div class="project-card">
+                    <div class="overly"></div>
+                    <div class="tijltil-gamers"></div>
+                    <h2>TiJLTiL Gamers <br> Easy Trophy Earning for PlayStation Games <br> <span>Brand Identity | Saudi Arabia</span></h2> 
+                </div>
+            </a>
 
-            <div class="project-card">
-                <div class="overly"></div>
-                <div class="dsw"></div>
-                <h2>DSW <br> Graphic Designer <br> <span>Brand Identity | Saudi Arabia</span></h2>
-            </div>
+            <a href="Projects Case Study/dsw.html">
+                <div class="project-card">
+                    <div class="overly"></div>
+                    <div class="dsw"></div>
+                    <h2>DSW <br> Graphic Designer <br> <span>Brand Identity | Saudi Arabia</span></h2>
+                </div>
+            </a>
         </div>
     </section>
 
@@ -118,6 +126,71 @@
                     <a href="#" class="cta-btn cv-btn"><span class="btn-text">Download CV</span><span class="btn-bg"></span><i class="ri-arrow-down-line"></i></a>
                     <a href="#contact" class="sec-btn contact-btn"><span class="btn-text">Contact</span><span class="btn-bg"></span><i class="ri-mail-send-line"></i></a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!----------------CONTACT---------------->
+
+    <section class="contact" id="contact">
+        <h1>Let's Talk</h1>
+        <p>Let's Turn Your Ideas into Reality. Connect with me today to explore the possibilities and kickstart your project. You can reach out to me via whatsapp, email, or by filling out the contact form below.</p>
+        <div class="contact-box">
+            <div class="contact-left">
+                <h3>Send Your Request</h3>
+                <form action="https://formspree.io/f/xgejdwne" method="POST">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Full Name</label>
+                            <input type="text" name="Name" id="name" placeholder="Andrew Tate" autocomplete="off" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Phone</label>
+                            <input type="text" name="Phone" id="phone" placeholder="+964 750 123 4567"  autocomplete="off" required>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input type="email" name="Email" id="email" placeholder="example@mail.com"  autocomplete="off" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Subject</label>
+                            <input type="text" name="Subject" id="subject" placeholder="Logo Design Request!"  autocomplete="off" required>
+                        </div>
+                    </div>
+
+                    <label>Message</label>
+                    <textarea class="message" rows="5" name="Message" id="message" placeholder="Your Message"  autocomplete="off"></textarea>
+
+                    <button id="button-cont" type="submit">
+                        <a class="cta-btn submit-btn"><span class="btn-text">Send</span><span class="btn-bg"></span><i class="ri-arrow-right-line"></i></a>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="contact-right">
+                <h2>Reach Out to Me</h2>
+
+                <table>
+                    <tr>
+                        <td>Email</td>
+                        <td><h3>conact@ramocreative.com</h3></td>
+                    </tr>
+                    <tr>
+                        <td>Whatsapp</td>
+                        <td><h3>+964 751 132 0227</h3></td>
+                    </tr>
+                    <tr>
+                        <td>Follow me</td>
+                        <td><h3><span><i class="ri-twitter-x-line"></i></span>X</h3></td>
+				        <td><h3><span><i class="ri-instagram-line"></i></span>Instagram</h3></td>
+				        <td><h3><span><i class="ri-behance-line"></i></span>Beahance</h3></td>
+                    </tr>
+                </table>
             </div>
         </div>
     </section>
