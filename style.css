@@ -54,7 +54,79 @@ textarea {
     resize: none;
 }
 
-/*----------------SCROLL-UP----------------*/
+/*---------------- PRELOADER ----------------*/
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #0d1321;
+    z-index: 99999;
+    animation: preLoader 1s 6s ease-in-out forwards;
+    user-select: none;
+}
+
+.preloader img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    opacity: 0;
+    animation: upSlideIn 2.4s forwards;
+}
+
+.preloader h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    opacity: 0;
+    animation: upSlideIn 4s 2.15s forwards;
+}
+
+@keyframes preLoader {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes upSlideIn {
+    0% {
+        transform: translate(-50%, 0%);
+        opacity: 0;
+    }
+    
+    25% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+}
+
+/*---------------- SCROLL-UP ----------------*/
 
 #progress {
     display: none;
@@ -97,7 +169,7 @@ textarea {
     transform: translateY(-6px);
 }
 
-/*----------------HEADER----------------*/
+/*---------------- HEADER ----------------*/
 
 header {
     position: fixed;
@@ -111,7 +183,10 @@ header {
     padding: 36px 144px;
     background: #0d1321e9;
     backdrop-filter: blur(5px);
+    animation: downSlideIn 1s 6.8s forwards;
+    transform: translateY(-100%);
     z-index: 999;
+    
 }
 
 header .logo {
@@ -148,22 +223,44 @@ header .logo {
     transform: scaleX(1);
 }
 
+@keyframes downSlideIn {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
 /*----------------HOMEPAGE----------------*/
 
 .homepage {
     width: 100%;
     height: 100vh;
-    position: relative;
-}
-
-.homepage-cont {
-    position: absolute;
-    bottom: 200px;
-    left: 144px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 144px;
 }
 
 .hero-text {
     text-transform: uppercase;
+}
+
+.hero-text p:first-child {
+    opacity: 0;
+    animation: leftSlideIn 1s 6.6s ease-in-out forwards;
+}
+
+.hero-text h1 {
+    opacity: 0;
+    animation: leftSlideIn 1s 6.4s ease-in-out forwards;
+}
+
+.hero-text p:last-child {
+    opacity: 0;
+    animation: leftSlideIn 1s 7s ease-in-out forwards;
 }
 
 .hero-text p:not(:last-child) {
@@ -180,13 +277,15 @@ header .logo {
     text-transform: none;
     background: transparent;
     margin-top: 36px;
-    max-width: 80%;
+    max-width: 48%;
 }
 
 .sm-cont {
     display: flex;
     gap: 40px;
     margin-top: 60px;
+    animation: leftSlideIn 1s 6.6s forwards;
+    opacity: 0;
 }
 
 .sm-cont span {
@@ -271,8 +370,8 @@ header .logo {
     justify-content: flex-start;
     align-items: flex-end;
     gap: 60px;
-    margin-top: 16%;
-    width: 40%;
+    margin-top: 12%;
+    width: 24%;
 }
 
 .cta-btn {
@@ -293,6 +392,8 @@ header .logo {
     background: #31e981;
     transition: 0.7s;
     z-index: 1;
+    animation: leftSlideIn 1s 7.2s forwards;
+    opacity: 0;
 }
 
 .cta-btn::before {
@@ -368,6 +469,8 @@ header .logo {
     box-shadow: 0px 0px 0px 1px #fcfcfc inset;
     transition: 0.4s;
     z-index: 1;
+    animation: leftSlideIn 1s 7.6s forwards;
+    opacity: 0;
 }
 
 .sec-btn:hover {
@@ -405,6 +508,22 @@ header .logo {
     opacity: 1;
     width: 24px;
     margin-left: 12px;
+}
+
+/* Keyframeas */
+
+@keyframes leftSlideIn {
+    from {
+        transform: translateX(-10%);
+        filter: blur(5px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        filter: blur(0);
+        opacity: 1;
+    }
 }
 
 /*----------------PROJECTS----------------*/
